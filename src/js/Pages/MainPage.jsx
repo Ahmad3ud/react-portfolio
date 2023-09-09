@@ -1,6 +1,6 @@
 import React from "react";
-import DownloadButton from "../Component/DownloadButton";
 
+import {BsDownload} from "react-icons/bs";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 
 function MainPage() {
@@ -47,7 +47,7 @@ function MainPage() {
             </a>
             
           </div>
-          <div className="hidden  md:inline-block"><DownloadButton  /></div>
+          <div className="hidden  md:inline-block"><a href="src/assets/Ahmad-Abo-Kassem.pdf" download><button className=' text-3xl flex gap-4 items-center justify-center  py-4 px-8 font-bold  rounded-lg tracking-widest  duration-500 hover:scale-[95%]    ' > <BsDownload size={30} /> <p>Download CV</p></button></a></div>
           
          
         </div>
@@ -66,7 +66,7 @@ function MainPage() {
             </a>
             
           </div>
-          <div className="md:hidden "><DownloadButton  /></div>
+          <div className="md:hidden "> <a href="src/assets/Ahmad-Abo-Kassem.pdf" download><button className=' text-3xl flex gap-4 items-center justify-center  py-4 px-8 font-bold  rounded-lg tracking-widest  duration-500 hover:scale-[95%]    ' > <BsDownload size={30} /> <p>Download CV</p></button></a></div>
           
           
            
