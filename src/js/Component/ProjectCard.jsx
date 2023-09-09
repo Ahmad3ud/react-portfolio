@@ -84,7 +84,8 @@ export default function ProjectCard({ project} ) {
         <h4 className="text-4xl font-bold">{project.text} </h4>
         <div className="text-2xl" >Technology i have used:
         <div className="   text-[#90b8f8] flex w-full gap-4  py-4 ">
-          {project.skillsUsed.map((skil ) => skillsData[skil])}
+          {project.skillsUsed.map((skil,index ) => 
+          <div key={index}>{skillsData[skil]}</div> )}
         </div>
         </div>
        

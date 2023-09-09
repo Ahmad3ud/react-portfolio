@@ -50,7 +50,7 @@ function Contact() {
         
         <button
           type="submit"
-          className="w-fit  text-2xl flex items-center justify-center duration-500  font-bold py-2 px-4 border-red-400 border rounded-lg tracking-widest bg-red-500 hover:scale-[95%]  "
+          className="w-fit text-stone-50 text-2xl flex items-center justify-center duration-500  font-bold py-2 px-4 border-red-400 border rounded-lg tracking-widest bg-red-500 hover:scale-[95%]  "
         >
           Send message
         </button>
