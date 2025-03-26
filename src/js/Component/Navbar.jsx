@@ -1,36 +1,38 @@
-import { Link } from "react-router-dom";
+import {Outlet} from "react-router-dom"
 
-function Navbar({ setShowNavbar }) {
+function Navbar({setShowNavbar}) {
   const items = [
-    { title: "Services", url: "#scroll-to-services" },
-    { title: "Skills", url: "#scroll-to-skills" },
-    { title: "Projects", url: "#scroll-to-projects" },
-    { title: "Contact", url: "#scroll-to-contact" },
-  ];
+    {title: "Über", url: "#about"},
+    {title: "Fähigkeiten ", url: "#skills"},
+    {title: "Projekte", url: "#projects"},
+    {title: "Kontakt", url: "#contact"},
+  ]
 
   const closeNavbar = () => {
     if (window.innerWidth < 768) {
-      setShowNavbar(false);
+      setShowNavbar(false)
     }
-  };
+  
+  }
 
   return (
-    <div className=" md:static top-20  w-full  h-screen md:h-fit  flex md:top-0   flex-col md:flex-row justify-center  items-center md:m-0 z-20   fixed    dark:text-stone-50 md:dark:bg-[rgba(36,36,36,0)] md:bg-stone-100/0 dark:bg-[rgba(36,36,36)] bg-stone-100   dark:border-stone-50     ">
-      <ul className="flex flex-col md:flex-row  justify-center items-center   w-fit  md:pt-0  gap-8  md:gap-8 h-screen md:h-full   ">
+    <div className="z-20  w-screen md:w-full fixed md:static  h-screen md:h-full flex md:flex-row justify-start  items-center md:top-0 top-24 flex-col dark:text-stone-50 dark:bg-[rgba(36,36,36)] bg-stone-100">
+      <ul className=" md:h-full flex  flex-col md:flex-row  justify-center items-center pt-40 md:pt-0  gap-20 md:gap-8 ">
         {items.map((item) => (
           <li
             onClick={closeNavbar}
             key={item.title}
-            className=" text-5xl md:text-4xl font-light  text-[#90b8f8] duration-500  md:hover:scale-[95%]    "
+            className="   text-4xl md:text-3xl  font-medium text-center md:text-[#6683C2] duration-500 md:hover:scale-[95%]"
           >
-            <a className="relative  " href={item.url}>
+            <a className="relative   " href={item.url}>
               {item.title}
             </a>
           </li>
         ))}
       </ul>
+      <Outlet />
     </div>
-  );
+  )
 }
 
-export default Navbar;
+export default Navbar

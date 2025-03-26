@@ -1,24 +1,29 @@
-import React from "react"
-import { FiMoon, FiSun } from "react-icons/fi"
-import { RxMoon} from "react-icons/rx"
-RxMoon
-import Icon from "./Icon"
+import React from "react";
+import { FiSun } from "react-icons/fi";
+import { RxMoon } from "react-icons/rx";
+RxMoon;
+import Icon from "./Icon";
 
-function Theme({handleThemeSwitch, isDark}) {
+function Theme({ handleThemeSwitch, isDark }) {
   return (
-    <div className=" pr-2 w-fit   dark:bg-[rgba(36,36,36,0)]" onClick={handleThemeSwitch}>
-      {isDark ? (
+    <div className=" w-1/3 flex justify-end items-center dark:bg-[rgba(36,36,36,0)]  pr-3 md:pr-0" onClick={handleThemeSwitch}>
+      {!isDark ? (
         <Icon>
-          <FiSun size={36} className= "cursor-pointer text-orange-300 duration-700  hover:scale-[110%] hover:rotate-90" />
+          <FiSun
+            size={26}
+            className="cursor-pointer text-stone-50 duration-700 hover:scale-[110%] hover:rotate-90"
+          />
         </Icon>
       ) : (
         <Icon>
-          <RxMoon size={36} className=" cursor-pointer duration-700  hover:scale-[110%] hover:rotate-[-270deg]" />
+          <RxMoon
+            size={26}
+            className=" cursor-pointer text-[#26282b] duration-700 hover:scale-[110%] hover:rotate-[140deg]"
+          />
         </Icon>
       )}
-      
     </div>
-  )
+  );
 }
 
-export default Theme
+export default Theme;
