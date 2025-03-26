@@ -12,7 +12,7 @@ function Home() {
   })
   return (
     <section
-      className="  min-w-full  min-h-full flex flex-col justify-center items-center top-24 md:pt-44 text-[rgb(36,36,36)] dark:text-stone-50 dark:bg-[rgb(30,30,30)] 
+      className="  min-w-full  min-h-full flex flex-col justify-center items-center pt-24 md:pt-44 text-[rgb(36,36,36)] dark:text-stone-50 dark:bg-[rgb(30,30,30)] 
        bg-stone-100  "
     >
       <div className="  lg:w-9/12 h-full  gap-20 md:gap-8 w-full flex flex-col  lg:flex-row  justify-center items-center  ">
