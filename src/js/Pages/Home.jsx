@@ -64,7 +64,7 @@ function Home() {
               </i>
             </a>
           </div>
-          <a href="#scroll-to-projects">
+          <a href="#projects">
             <button className=" w-fit   md:hidden text-xl  items-center justify-center duration-500  font-bold py-4 px-8    rounded-2xl tracking-widest  bg-[#6683C2]  hover:bg-[#072049]   text-stone-50  shadow-md">
               Zur Portfolio
             </button>
